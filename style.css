@@ -1,0 +1,71 @@
+* {
+    margin: 0; /* Đặt margin cho tất cả các phần tử bằng 0 */
+    padding: 0; /* Đặt padding cho tất cả các phần tử bằng 0 */
+    font-family: 'Poppins', sans-serif; /* Thiết lập font chữ cho toàn bộ trang */
+    box-sizing: border-box; /* Bao gồm padding và border trong kích thước tổng thể của phần tử */
+}
+
+body {
+    background: linear-gradient(135deg, #250057, #6a2c91); /* Nền gradient cho trang */
+    height: 100vh; /* Chiều cao của body bằng chiều cao của viewport */
+    display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    overflow: hidden; /* Ẩn bất kỳ nội dung nào tràn ra ngoài */
+}
+
+.input-box {
+    background: #ffffff; /* Màu nền của ô nhập */
+    width: 90%; /* Chiều rộng 90% so với phần tử cha */
+    max-width: 500px; /* Chiều rộng tối đa là 500px */
+    border-radius: 20px; /* Bo tròn các góc của ô nhập */
+    padding: 20px; /* Khoảng cách bên trong của ô nhập */
+    margin: 0 auto; /* Căn giữa ô nhập theo chiều ngang */
+    display: flex; /* Sử dụng Flexbox để căn giữa các phần tử bên trong */
+    align-items: center; /* Căn giữa các phần tử bên trong theo chiều dọc */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Đổ bóng cho ô nhập */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển tiếp cho biến đổi và bóng */
+}
+
+.input-box:hover {
+    transform: translateY(-8px); /* Di chuyển ô nhập lên khi hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Tăng cường bóng khi hover */
+}
+
+.input-box input {
+    width: 100%; /* Chiều rộng của ô nhập chiếm toàn bộ chiều rộng của ô chứa */
+    padding: 12px 15px; /* Khoảng cách bên trong cho ô nhập */
+    border: 2px solid #250057; /* Đường viền của ô nhập */
+    border-radius: 10px; /* Bo tròn các góc của ô nhập */
+    font-size: 24px; /* Kích thước chữ trong ô nhập */
+    color: #555; /* Màu chữ trong ô nhập */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển tiếp cho màu viền và bóng */
+}
+
+.input-box input:focus {
+    border-color: #6a2c91; /* Thay đổi màu viền khi ô nhập được chọn */
+    outline: none; /* Ẩn đường viền mặc định khi chọn */
+    box-shadow: 0 0 5px rgba(106, 44, 145, 0.5); /* Hiệu ứng phát sáng khi chọn */
+}
+
+.input-box img {
+    width: 40px; /* Kích thước biểu tượng mắt */
+    cursor: pointer; /* Hiển thị con trỏ chuột như một bàn tay khi hover */
+    margin-left: 10px; /* Khoảng cách bên trái của biểu tượng mắt */
+    transition: transform 0.3s, filter 0.3s; /* Hiệu ứng chuyển tiếp cho biến đổi và bộ lọc */
+}
+
+.input-box img:hover {
+    transform: scale(1.2); /* Phóng to biểu tượng khi hover */
+    filter: brightness(1.2); /* Làm sáng biểu tượng khi hover */
+}
+
+/* Thiết kế đáp ứng */
+@media (max-width: 600px) {
+    .input-box {
+        padding: 15px; /* Điều chỉnh padding cho màn hình nhỏ hơn */
+    }
+    .input-box input {
+        font-size: 20px; /* Kích thước chữ nhỏ hơn cho màn hình nhỏ hơn */
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Đảm bảo trang web phản hồi tốt trên các thiết bị di động -->
+    <title>Password Toggle - Easy Tutorials</title> <!-- Tiêu đề của trang web -->
+    <link rel="stylesheet" href="style.css"> <!-- Liên kết đến tệp CSS để định dạng trang -->
+</head>
+<body>
+    <div class="input-box"> <!-- Khối chứa ô nhập mật khẩu và biểu tượng mắt -->
+        <input type="password" placeholder="password" id="password"> <!-- Ô nhập mật khẩu, mặc định là ẩn -->
+        <img src="5062877.png" id="eyeicon"> <!-- Biểu tượng mắt để hiển thị/ẩn mật khẩu -->
+    </div>
+    <script>
+        // Lấy tham chiếu đến các phần tử HTML
+        let eyeicon = document.getElementById("eyeicon"); // Biểu tượng mắt
+        let password = document.getElementById("password"); // Ô nhập mật khẩu
+
+        // Thêm sự kiện nhấp chuột cho biểu tượng mắt
+        eyeicon.onclick = function() {
+            // Kiểm tra kiểu của ô nhập mật khẩu
+            if (password.type == "password") {
+                password.type = "text"; // Nếu đang ẩn, chuyển sang hiển thị
+                eyeicon.src = "eye-open-4.png"; // Thay đổi hình ảnh biểu tượng mắt
+            } else {
+                password.type = "password"; // Nếu đang hiển thị, chuyển sang ẩn
+                eyeicon.src = "5062877.png"; // Khôi phục hình ảnh biểu tượng mắt ban đầu
+            }
+        }
+    </script>
+</body>
+</html>
